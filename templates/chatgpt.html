@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 style="margin-left: 590px; padding-top:100px; color:darkolivegreen;">Chatgpt Clone</h1>
+
+    <div style="position:absolute; margin-left: 600px">
+
+        <form action="" method="post">
+            {% csrf_token %}
+        
+            <input type="text" name="user-input" value=""><br><br>
+            <button type="submit" class="btn btn-success" style="margin-left:55px;">Submit</button>
+        
+            </form>
+
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    {% if response %}
+
+    <div>
+        {{response|safe}}
+    </div>
+    {%endif%}
+    
+</body>
+</html>
